@@ -21,7 +21,6 @@ public class NumberSum {
      * @date: 2018/9/22 16:24
     */
     public static int[] twoSum(int[] nums,int target){
-        List<Integer> result = new ArrayList<Integer>();
         for (int i = 0 ; i < nums.length; i++){
             for (int j = i+1 ; j < nums.length ; j ++){
                 if (nums[j] + nums[i] == target){
@@ -40,7 +39,7 @@ public class NumberSum {
      * @date: 2018/9/22 18:27
     */
     public static int[] twoSum1(int[] nums, int target){
-        Map<Integer,Integer> m = new HashMap<Integer, Integer>();
+        Map<Integer,Integer> m = new HashMap();
         for (int i = 0 ; i < nums.length; i++){
             m.put(nums[i],i);
         }
@@ -60,7 +59,7 @@ public class NumberSum {
      * @date: 2018/9/22 18:59
     */
     public static int[] twoSum2(int[] nums,int target){
-        Map<Integer,Integer> m = new HashMap<Integer, Integer>();
+        Map<Integer,Integer> m = new HashMap();
         for (int i = 0 ; i < nums.length; i++){
             int element = target - nums[i];
             if (m.containsKey(element)){
