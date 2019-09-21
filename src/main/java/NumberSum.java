@@ -74,7 +74,7 @@ public class NumberSum {
         int[] nums = {2,7,11,15};
         int[] nums1 = twoSum(nums,22);
         int[] nums2 = twoSum1(nums,9);
-        int[] nums3 = twoSum2(nums,13);
+        int[] nums3 = twoSum2(nums,9);
 
         Ints.asList(nums1).forEach(i -> System.out.print(i+","));
         System.out.println();
