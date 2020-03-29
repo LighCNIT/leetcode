@@ -12,18 +12,19 @@
  *
  * 输入: [4,1,2,1,2]
  * 输出: 4
- * @Author 李光华
- * @Date 2019/10/9 17:46
+ * @Author 谢开心
+ * @Date 2020/01/11  11:07
  **/
 public class FindNumber {
+
 
     /**
      * @Description: 异或操作 n^0 = n; n^n = 0
      * 时间复杂度 O(1) --- O(n)
      * @param nums
      * @return
-     * @author 李光华
-     * @date 2019/10/9  18:07
+     * @author 谢开心
+     * @date 2020/01/11  11:07
      */
     public static int singleNumber(int[] nums) {
         int target = 0;
@@ -34,7 +35,7 @@ public class FindNumber {
     }
 
     public static void main(String[] args) {
-        int[] nums = {4,1,2,1,2};
+        int[] nums = {6,1,2,1,2};
         System.out.println(singleNumber(nums));
     }
 }

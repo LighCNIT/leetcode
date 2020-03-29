@@ -1,4 +1,3 @@
-import com.google.common.primitives.Ints;
 
 import java.util.*;
 
@@ -75,12 +74,5 @@ public class NumberSum {
         int[] nums1 = twoSum(nums,22);
         int[] nums2 = twoSum1(nums,9);
         int[] nums3 = twoSum2(nums,9);
-
-        Ints.asList(nums1).forEach(i -> System.out.print(i+","));
-        System.out.println();
-        Ints.asList(nums2).forEach(e -> System.out.print(e+","));
-        System.out.println();
-        Ints.asList(nums3).forEach(e -> System.out.print(e+","));
-
     }
 }

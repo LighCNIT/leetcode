@@ -30,7 +30,7 @@ public class LongestSubstr {
         for (char c : stringArr){
             newArr.add(c);
         }
-        newArr.stream().forEach(i-> System.out.println(i));
+//        newArr.stream().forEach(i-> System.out.println(i));
         System.out.println(newArr.size());
     }
 
