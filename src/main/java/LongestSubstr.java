@@ -1,5 +1,6 @@
-import java.util.HashSet;
-import java.util.Set;
+import com.google.common.collect.Maps;
+
+import java.util.Map;
 
 /**
  * @ClassName LongestSubstr
@@ -24,17 +25,31 @@ import java.util.Set;
  **/
 public class LongestSubstr {
 
-    public static void getMaxSubstr(String str){
-        char [] stringArr = str.toCharArray();
-        Set newArr = new HashSet();
-        for (char c : stringArr){
-            newArr.add(c);
+    /**
+     * @Description: 构建一个map存储每个字符的以及位置，
+     *  发现有重复的则更改value的值遍历完最后字符就可以得到最大子串长度
+     *  时间复杂度度 O(n)
+     * @param str
+     * @return
+     * @author 李光华
+     * @date 2020/6/3  15:55
+     */
+    public static int getMaxSubstr(String str){
+        Map<Character,Integer> map = Maps.newHashMap();
+        int n = str.length(),ans = 0;
+        for (int start=0,end=0;end<n;end++){
+            char aa = str.charAt(end);
+            if (map.containsKey(aa)){
+                start = Math.max(map.get(aa),start);
+            }
+            ans = Math.max(ans,end-start+1);
+            map.put(str.charAt(end),end+1);
         }
-        newArr.stream().forEach(i-> System.out.println(i));
-        System.out.println(newArr.size());
+        System.out.println(map);
+        return ans;
     }
 
     public static void main(String[] args) {
-        getMaxSubstr("abcdabdcefb");
+        System.out.println(getMaxSubstr("abcdabbdcefb"));
     }
 }
