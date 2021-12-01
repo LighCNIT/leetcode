@@ -28,6 +28,7 @@ public class LeetCode4 {
      * @date 2019/9/21  17:15
      */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        Arrays.stream(nums1).min().getAsInt();
         if (nums1.length + nums2.length == 0) {
             throw new IllegalArgumentException("nums1,nums2不能同时为空");
         }
